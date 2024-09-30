@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D74ACB0F2CAAB07700E5732E /* DesktopHopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74ACB0E2CAAB07700E5732E /* DesktopHopperApp.swift */; };
-		D74ACB112CAAB07700E5732E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74ACB102CAAB07700E5732E /* ContentView.swift */; };
 		D74ACB132CAAB07900E5732E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74ACB122CAAB07900E5732E /* Assets.xcassets */; };
 		D74ACB162CAAB07900E5732E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74ACB152CAAB07900E5732E /* Preview Assets.xcassets */; };
+		D74ACB232CAAD09E00E5732E /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = D74ACB222CAAD09E00E5732E /* KeyboardShortcuts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D74ACB0B2CAAB07700E5732E /* DesktopHopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopHopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74ACB0E2CAAB07700E5732E /* DesktopHopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopHopperApp.swift; sourceTree = "<group>"; };
-		D74ACB102CAAB07700E5732E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D74ACB122CAAB07900E5732E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D74ACB152CAAB07900E5732E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D74ACB172CAAB07900E5732E /* DesktopHopper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesktopHopper.entitlements; sourceTree = "<group>"; };
@@ -27,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74ACB232CAAD09E00E5732E /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				D74ACB0E2CAAB07700E5732E /* DesktopHopperApp.swift */,
-				D74ACB102CAAB07700E5732E /* ContentView.swift */,
 				D74ACB122CAAB07900E5732E /* Assets.xcassets */,
 				D74ACB172CAAB07900E5732E /* DesktopHopper.entitlements */,
 				D74ACB142CAAB07900E5732E /* Preview Content */,
@@ -85,6 +84,9 @@
 			dependencies = (
 			);
 			name = DesktopHopper;
+			packageProductDependencies = (
+				D74ACB222CAAD09E00E5732E /* KeyboardShortcuts */,
+			);
 			productName = DesktopHopper;
 			productReference = D74ACB0B2CAAB07700E5732E /* DesktopHopper.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +115,9 @@
 				Base,
 			);
 			mainGroup = D74ACB022CAAB07700E5732E;
+			packageReferences = (
+				D74ACB212CAAD09E00E5732E /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = D74ACB0C2CAAB07700E5732E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +144,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74ACB112CAAB07700E5732E /* ContentView.swift in Sources */,
 				D74ACB0F2CAAB07700E5732E /* DesktopHopperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -256,6 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -341,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D74ACB212CAAD09E00E5732E /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D74ACB222CAAD09E00E5732E /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D74ACB212CAAD09E00E5732E /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D74ACB032CAAB07700E5732E /* Project object */;
 }
